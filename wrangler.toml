@@ -1,0 +1,19 @@
+# Cloudflare Pages configuration — Bangladesh Digital National Portal
+# This file is used by `wrangler` CLI for local preview and manual deployment.
+#
+# Build configuration (set in Cloudflare dashboard or GitHub Actions):
+#   Build command: npm run build
+#   Build output directory: out
+
+name = "bangladesh-digital-portal"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "out"
+
+# Environment variables (set via Cloudflare dashboard for production)
+[vars]
+NEXT_PUBLIC_SITE_URL = "https://bangladesh-digital-portal.pages.dev"
+
+# Local development settings (preview with `wrangler pages dev out`)
+[dev]
+port = 8788
+local_protocol = "http"

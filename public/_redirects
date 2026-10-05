@@ -1,0 +1,5 @@
+# Cloudflare Pages redirects
+
+# SPA fallback — all 404 routes go to the static index.html
+# Next.js static export produces index.html at root, so this handles client-side routing
+/*  /index.html  200

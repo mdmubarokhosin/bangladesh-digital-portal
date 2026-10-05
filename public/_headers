@@ -1,0 +1,22 @@
+# Cloudflare Pages security & caching headers
+
+# Security headers applied to all responses
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  X-XSS-Protection: 1; mode=block
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+# Cache static assets aggressively (Next.js _next/static)
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Cache fonts and images
+/_next/image/*
+  Cache-Control: public, max-age=86400
+
+# API routes — no caching
+/api/*
+  Cache-Control: no-store, must-revalidate

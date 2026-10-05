@@ -1,0 +1,8 @@
+# Bangladesh Digital National Portal — robots.txt
+# Allow all crawlers full access
+
+User-agent: *
+Allow: /
+
+# Sitemap (update with your production domain)
+Sitemap: https://your-domain.pages.dev/sitemap.xml
